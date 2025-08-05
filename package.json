@@ -1,0 +1,43 @@
+{
+  "name": "umi-sdk",
+  "version": "0.1.0",
+  "description": "Umi SDK supports development of plugin for Hardhat to support the development of Move smart contracts on the Umi Network.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "umi",
+    "move",
+    "hardhat",
+    "smart-contract"
+  ],
+  "author": "Umi Team",
+  "scripts": {
+    "lint:fix": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' && tslint --fix --config tslint.json --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "test": "mocha --exit --recursive 'test/**/*.test.ts'",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@mysten/bcs": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.2.0",
+    "hardhat": "^2.26.1",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "hardhat": "2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UmiNetwork/umi-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UmiNetwork/umi-sdk/issues"
+  },
+  "homepage": "https://github.com/UmiNetwork/umi-sdk#readme",
+  "license": "ISC"
+}
