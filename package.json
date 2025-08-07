@@ -1,7 +1,7 @@
 {
   "name": "umi-sdk",
-  "version": "0.1.0",
-  "description": "Umi SDK supports development of plugin for Hardhat to support the development of Move smart contracts on the Umi Network.",
+  "version": "0.1.1",
+  "description": "Umi SDK helps development of Move and Solidity smart contracts on the Umi network.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
