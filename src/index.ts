@@ -7,19 +7,12 @@ import { Artifacts } from 'hardhat/internal/artifacts';
 import path from 'path';
 
 import type { Artifact } from 'hardhat/types/artifacts';
+
 const UMI_SERIALIZER = bcs.enum('ScriptOrDeployment', {
   Script: bcs.byteVector(),
   Module: bcs.vector(bcs.byteVector()),
   EvmContract: bcs.byteVector(),
 });
-
-function readBytecodeFile(path: fs.PathLike): string {
-  return fs.readFileSync(path, { encoding: 'hex' });
-}
-
-function readDir(path: fs.PathLike): fs.Dirent[] {
-  return fs.readdirSync(path, { withFileTypes: true });
-}
 
 async function executeChildProcess(cmd: string): Promise<[ChildProcess.ExecException | null, string, string]> {
   return new Promise((resolve, _reject) => {
