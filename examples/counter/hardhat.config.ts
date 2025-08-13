@@ -9,7 +9,7 @@ const config: HardhatUserConfig = {
     solidity: '0.8.24',
     networks: {
         devnet: {
-            url: 'http://localhost:8545',
+            url: 'https://devnet.uminetwork.com',
             accounts: [process.env.PRIVATE_KEY || ''],
         },
     },
